@@ -185,6 +185,15 @@ div {
 }
 
 @media only screen and (max-width: 384px) {
+  .footer-left {
+    flex-direction: column;
+  }
+  .footer-left a,
+  .footer-left a:link,
+  .footer-left a:hover {
+    margin-right: 0;
+    padding: 1em;
+  }
   .footer-email .signup-wrapper {
     flex-direction: column;
     margin-bottom: 3em;
