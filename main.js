@@ -27,15 +27,15 @@ document.addEventListener("DOMContentLoaded", function() {
   );
 
   function showTermsOfService() {
-    console.log("showTermsOfService");
     termlyWrapper.classList.add("visible");
+    termlyCloseButton.classList.remove("hidden");
     termlyTermsofService.style.display = "block";
     termlyPrivacyPolicy.style.display = "none";
   }
 
   function showPrivacyPolicy() {
-    console.log("showPrivacyPolicy");
     termlyWrapper.classList.add("visible");
+    termlyCloseButton.classList.remove("hidden");
     termlyPrivacyPolicy.style.display = "block";
     termlyTermsofService.style.display = "none";
   }
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function hideTermlyFrames() {
     console.log("hideTermlyFrames");
     termlyWrapper.classList.remove("visible");
+    termlyCloseButton.classList.add("hidden");
   }
 
   termlyLinkTermsOfService.addEventListener("click", function() {
@@ -51,7 +52,19 @@ document.addEventListener("DOMContentLoaded", function() {
   termlyLinkPrivacyPolicy.addEventListener("click", function() {
     showPrivacyPolicy();
   });
+
   termlyCloseButton.addEventListener("click", function() {
+    hideTermlyFrames();
+  });
+
+
+  termlyLinkTermsOfService.addEventListener("touchend", function () {
+    showTermsOfService();
+  });
+  termlyLinkPrivacyPolicy.addEventListener("touchend", function () {
+    showPrivacyPolicy();
+  });
+  termlyCloseButton.addEventListener("touchend", function() {
     hideTermlyFrames();
   });
 });
