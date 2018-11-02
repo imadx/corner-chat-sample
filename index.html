@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="main.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,500" rel="stylesheet">
 </head>
 
 <body>
@@ -47,8 +48,8 @@
   <div class="footer">
     <div class="footer-left">
       <a href="#"><img src="i/logo.png" alt="Corner.chat" /></a>
-      <a href="#" class="hoverFeedback">Terms of Service</a>
-      <a href="#" class="hoverFeedback">Privacy Policy</a>
+      <a href="javascript:void(0);" id="termly-link-terms-of-service" class="hoverFeedback">Terms of Service</a>
+      <a href="javascript:void(0);" id="termly-link-privacy-policy" class="hoverFeedback">Privacy Policy</a>
     </div>
     <div class="footer-social">
       <a href="https://twitter.com/CornerChat" class="social-icon hoverFeedback"><img src="i/twitter.svg" alt="Find us on Twitter" /></a>
@@ -57,8 +58,8 @@
     </div>
     <div class="footer-email">
       <div class="signup-wrapper">
-        <input type="text" placeholder="Get your business on Corner Chat">
-        <button>Sign up</button>
+        <p>Get your business on Corner Chat</p>
+        <a href="mailto:contact@corner.chat">Sign up</a>
       </div>
     </div>
     <div class="footer-right">
@@ -66,6 +67,20 @@
         <img src="i/download_appstore.png" alt="Download on the App Store">
       </a>
     </div>
+  </div>
+  <div id="termly-wrapper">
+    <div id="termly-closeBtn">+</div>
+    <!-- Termly Tracking Code -->
+    <iframe id="termly-frame-privacy-policy" width="100%" style="height: 100vh" src="https://app.termly.io/document/privacy-policy/5a63705e-e2d0-4a5d-94c9-e7b3ca798cc6"
+      frameborder="0" allowfullscreen>
+      <p>Your browser does not support iframes.</p>
+    </iframe>
+
+    <!-- Termly Tracking Code -->
+    <iframe id="termly-frame-terms-of-service" width="100%" style="height: 100vh" src="https://app.termly.io/document/terms-of-use-for-online-marketplace/251bb857-08c5-44f8-8b5a-07ecf96c24fc"
+      frameborder="0" allowfullscreen>
+      <p>Your browser does not support iframes.</p>
+    </iframe>
   </div>
 </body>
 

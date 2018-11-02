@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 14pt;
   background: #10151b;
   color: #f0f7e5;
@@ -50,13 +50,13 @@ div {
 .center-plate .phone-preview {
   background: url(i/phone_placeholder.png) center no-repeat;
   background-size: contain;
-  max-width: 358px;
-  height: 712px;
+  max-width: 392px;
+  height: 772px;
   display: inline-flex;
   flex-direction: column;
   color: #10151b;
   justify-content: space-around;
-  padding: 40px;
+  padding: 80px;
   margin-top: 20vh;
   box-sizing: border-box;
 }
@@ -65,7 +65,7 @@ div {
 }
 
 .center-plate .phone-preview .logo-preview {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .center-plate .phone-preview .logo-preview img {
   max-width: 100%;
@@ -117,10 +117,8 @@ div {
   height: 30px;
 }
 .footer-email .signup-wrapper {
-  border: solid thin #258880;
-  border-radius: 22px;
-  height: 40px;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -133,17 +131,15 @@ div {
   margin: 0.5em;
 }
 
-.footer-email .signup-wrapper input {
-  background: none;
-  color: #f0f7e5;
-  border: none;
-  padding: 0 1em;
-  width: 220px;
+.footer-email .signup-wrapper p {
+  text-align: center;
+  margin-right: 10px;
 }
-.footer-email .signup-wrapper button {
+.footer-email .signup-wrapper a {
   background: #258880;
   color: #f0f7e5;
   font-weight: bold;
+  text-decoration: none;
   border-radius: 20px;
   height: 40px;
   display: inline-flex;
@@ -184,6 +180,50 @@ div {
   }
 }
 
+#termly-wrapper {
+  background: #f0f7e5;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.8);
+  transition: all 0.1s;
+}
+
+#termly-wrapper.visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+#termly-wrapper #termly-closeBtn {
+  color: #000;
+  display: flex;
+  padding: 0.3em;
+  font-size: 2em;
+  font-weight: lighter;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  right: 0;
+  top: 0;
+  margin: 1em;
+  cursor: pointer;
+}
+
+#termly-wrapper #termly-closeBtn:hover {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 384px) {
   .footer-left {
     flex-direction: column;
@@ -197,13 +237,5 @@ div {
   .footer-email .signup-wrapper {
     flex-direction: column;
     margin-bottom: 3em;
-  }
-  .footer-email .signup-wrapper input {
-    padding: 0.7em;
-  }
-  .footer-email .signup-wrapper button {
-    position: absolute;
-    margin-top: 3em;
-    width: 100%;
   }
 }
