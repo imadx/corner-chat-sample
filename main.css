@@ -91,6 +91,37 @@ div {
 .center-plate .phone-preview .buttons .button.secondary {
   background: #258880;
 }
+
+.sub-page .center-plate {
+  text-align: left;
+  max-width: 800px;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding-top: 0;
+}
+.sub-page .center-plate .header-wrapper {
+  padding: 100px 0;
+}
+.sub-page .center-plate .header {
+  display: flex;
+}
+.sub-page .center-plate .header img {
+  margin-right: 1em;
+}
+.sub-page .center-plate .header div {
+  display: flex;
+  align-items: center;
+}
+.sub-page .center-plate .desc {
+  text-align: left;
+  padding: 0;
+  margin: 1em 0;
+}
+.sub-page .content {
+  background: #f0f7e5;
+  border-radius: 8px;
+  box-shadow: 0 40px 80px -10px #000;
+}
 .footer {
   z-index: 1;
   display: flex;
@@ -249,6 +280,23 @@ div {
     flex-direction: column;
     margin-bottom: 3em;
   }
+}
+
+.no-link,
+.no-link:link,
+.no-link:active,
+.no-link:focus,
+.no-link:hover {
+  text-decoration: none;
+  color: #fff;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
